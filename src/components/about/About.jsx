@@ -1,7 +1,7 @@
 import React from 'react'
 import './About.css'
-import AboutImg from '../../assets/about.png'
-import CV from '../../assets/Prayas_Jadaun Resume.pdf'
+import AboutImg from '/src/assets/about2.jpeg'
+import CV from '/src/assets/prayas.pdf'
 import Info from './Info'
 const About = () => {
   return (
@@ -14,8 +14,7 @@ const About = () => {
             <div className="about__data">
                 <Info />
                 <p className="about__description"> 
-                Part-time widget whiz, full-time Flutter fan! Equipped with my reliable set of tools, which includes widgets and Bloc patterns, I approach the field of app creation with enthusiasm and accuracy. A well-designed software, in my opinion, is like the ideal animation: responsive, fluid, and astounds users. When I'm not creating dynamic user interfaces, you can probably find me battling layout restrictions or state management issues. Every application I create using Flutter is an experience in creating something aesthetically pleasing, pixel-perfect, and intuitive!
-            
+                Professional Flutter developer with industry-level expertise in building cross-platform mobile applications for Android and iOS. Specialized in creating scalable, high-performance apps using advanced state management solutions. My experience spans enterprise-level projects where I've delivered pixel-perfect, responsive user interfaces that prioritize both functionality and user experience. I focus on writing clean, maintainable code while implementing best practices for architecture, testing, and deployment across both platforms.
                 </p>
 
                 <a download="" href={CV} className="button button--flex"> Download Resume

@@ -12,7 +12,7 @@ const Data = () => {
   return (
     <div className='home__data'>
       <h2 className="home__greeting">{getGreetingMessage()}. I"m</h2>
-      
+
       <h1 className="home__title">
         Prayas Jadaun
         <svg
@@ -29,7 +29,7 @@ const Data = () => {
 
       <h3 className="home__subtitle">Flutter Developer</h3>
       <p className="home__description">
-        Hey, my name is Prayas Jadaun. I adore building dynamic, user-focused applications, and I'm an eager Flutter developer. Designing scalable and effective solutions is my goal, and I have a strong foundation in AWS Cloud Computing. Because of my commitment to lifelong learning, I'm constantly experimenting with new technologies and pushing the envelope in order to develop meaningful, user-driven experiences. Together, let's create something truly remarkable.
+        I'm Prayas Jadaun, a dedicated Flutter developer specializing in cross-platform mobile application development. With expertise in Dart programming and Flutter framework, I create high-performance, native-quality apps for both iOS and Android platforms. My technical foundation extends to AWS Cloud Computing and Node.js/Express backend development, enabling me to build scalable full-stack solutions and deploy robust applications. I focus on crafting intuitive user experiences through clean architecture patterns, state management solutions like Provider and Riverpod, and responsive UI designs. My commitment to continuous learning drives me to stay current with Flutter's evolving ecosystem and emerging mobile technologies, ensuring I deliver cutting-edge solutions that exceed client expectations.
       </p>
 
       <a href="#contact" className="button button--flex">

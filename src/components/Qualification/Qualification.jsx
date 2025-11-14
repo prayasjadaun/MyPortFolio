@@ -68,7 +68,7 @@ const Qualification = () => {
                 <h3 className="qualification__title">Master of Computer Application</h3>
                 <span className="qualification__subtitle">K.R Mangalam University</span>
                 <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt"></i> 2023 - Present
+                  <i className="uil uil-calendar-alt"></i> 2023 - 2025
                 </div>
               </div>
               <div>
@@ -106,7 +106,7 @@ const Qualification = () => {
                 <h3 className="qualification__title">Flutter Developer Intern</h3>
                 <span className="qualification__subtitle">Pro Housy Point Tech Solution Pvt. Ltd</span>
                 <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt"></i> Dec 2024 - Present
+                  <i className="uil uil-calendar-alt"></i> Dec 2024 - June 2025
                 </div>
               </div>
               <div>
@@ -157,7 +157,7 @@ const Qualification = () => {
                 <h3 className="qualification__title">Flutter Developer</h3>
                 <span className="qualification__subtitle">Pro Housy Point Tech Solution Pvt. Ltd</span>
                 <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt"></i> Dec 2024 - Present
+                  <i className="uil uil-calendar-alt"></i> July 2025 - Present
                 </div>
               </div>
               <div>

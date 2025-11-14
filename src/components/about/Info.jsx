@@ -3,28 +3,28 @@ import React from 'react'
 const Info = () => {
   return (
     <div className='about__info grid'>
-        <div className="about__box">
+      <div className="about__box">
         <i className='bx bx-award about__icon'></i>
         <h3 className='about__title'>Experience</h3>
         <span className="about__subtitle">
-            1 year working with Flutter.
+          2+ years industry experience
         </span>
-        </div>
-        <div className="about__box">
+      </div>
+      <div className="about__box">
         <i className='bx bx-briefcase-alt about__icon'></i>
-        <h3 className='about__title'> Projects</h3>
+        <h3 className='about__title'>Applications</h3>
         <span className="about__subtitle">
-            Android App Projects
+          Enterprise Applications
         </span>
-        </div>
-        <div className="about__box">
+      </div>
+      <div className="about__box">
         <i className='bx bx-support about__icon'></i>
-        <h3 className='about__title'> Support</h3>
+        <h3 className='about__title'>Platforms</h3>
         <span className="about__subtitle">
-            available 24/7
+          Android & iOS
         </span>
-        </div>
-      
+      </div>
+
     </div>
   )
 }
