@@ -154,7 +154,7 @@ const Qualification = () => {
           >
             <div className="qualification__data">
               <div>
-                <h3 className="qualification__title">Flutter Developer</h3>
+                <h3 className="qualification__title">Full-stack Mobile App Developer</h3>
                 <span className="qualification__subtitle">Pro Housy Point Tech Solution Pvt. Ltd</span>
                 <div className="qualification__calendar">
                   <i className="uil uil-calendar-alt"></i> July 2025 - Present

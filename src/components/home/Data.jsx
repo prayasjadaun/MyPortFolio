@@ -27,9 +27,9 @@ const Data = () => {
         </svg>
       </h1>
 
-      <h3 className="home__subtitle">Flutter Developer</h3>
+      <h3 className="home__subtitle">Full-stack Mobile App Developer</h3>
       <p className="home__description">
-        I'm Prayas Jadaun, a dedicated Flutter developer specializing in cross-platform mobile application development. With expertise in Dart programming and Flutter framework, I create high-performance, native-quality apps for both iOS and Android platforms. My technical foundation extends to AWS Cloud Computing and Node.js/Express backend development, enabling me to build scalable full-stack solutions and deploy robust applications. I focus on crafting intuitive user experiences through clean architecture patterns, state management solutions like Provider and Riverpod, and responsive UI designs. My commitment to continuous learning drives me to stay current with Flutter's evolving ecosystem and emerging mobile technologies, ensuring I deliver cutting-edge solutions that exceed client expectations.
+        I’m Prayas Jadaun, a Full-Stack Mobile Application Developer with expertise in Flutter for cross-platform mobile development and Python Django for backend systems. I specialize in building scalable, high-performance Android and iOS applications with clean architecture, secure API integration, and modern, user-centric UI/UX design. My focus is on delivering reliable, maintainable, and business-ready mobile solutions that solve real-world problems
       </p>
 
       <a href="#contact" className="button button--flex">

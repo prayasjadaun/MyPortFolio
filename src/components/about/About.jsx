@@ -1,7 +1,7 @@
 import React from 'react'
 import './About.css'
 import AboutImg from '/src/assets/about2.jpeg'
-import CV from '/src/assets/prayas.pdf'
+import CV from '/src/assets/Prayas.pdf'
 import Info from './Info'
 const About = () => {
   return (
@@ -14,7 +14,7 @@ const About = () => {
             <div className="about__data">
                 <Info />
                 <p className="about__description"> 
-                Professional Flutter developer with industry-level expertise in building cross-platform mobile applications for Android and iOS. Specialized in creating scalable, high-performance apps using advanced state management solutions. My experience spans enterprise-level projects where I've delivered pixel-perfect, responsive user interfaces that prioritize both functionality and user experience. I focus on writing clean, maintainable code while implementing best practices for architecture, testing, and deployment across both platforms.
+                Professional Full-Stack Mobile Application Developer with industry-level experience in building scalable, high-performance Android and iOS applications using Flutter and robust backend systems with Python Django. Skilled in clean architecture, advanced state management, secure API development, and delivering pixel-perfect, user-centric UI/UX for production-ready applications.
                 </p>
 
                 <a download="" href={CV} className="button button--flex"> Download Resume
