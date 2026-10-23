@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
-import { profile, projects } from '../data'
+import { profile, projects, productionApps } from '../data'
 
-const marquee = ['App shipped', 'API deployed', 'Bug squashed', 'Build passed', ...projects.map((p) => p.title)]
+const marquee = ['App shipped', 'API deployed', 'Bug squashed', 'Build passed', ...productionApps.map((a) => `${a.name} live`), ...projects.map((p) => p.title)]
 
 const Contact = () => {
   const form = useRef()

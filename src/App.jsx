@@ -3,6 +3,7 @@ import './styles.css'
 import Header from './sections/Header'
 import Hero from './sections/Hero'
 import Services from './sections/Services'
+import ProductionApps from './sections/ProductionApps'
 import Work from './sections/Work'
 import Journey from './sections/Journey'
 import Skills from './sections/Skills'
@@ -41,6 +42,7 @@ function App() {
       <main>
         <Hero />
         <Services />
+        <ProductionApps />
         <Work />
         <Journey />
         <Skills />

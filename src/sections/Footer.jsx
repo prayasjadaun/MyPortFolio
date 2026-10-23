@@ -1,4 +1,4 @@
-import { profile, socials, navLinks, projects } from '../data'
+import { profile, socials, navLinks, productionApps } from '../data'
 
 const Footer = () => (
   <footer className="footer">
@@ -33,12 +33,12 @@ const Footer = () => (
       </div>
 
       <div>
-        <h4>Projects</h4>
+        <h4>Live apps</h4>
         <ul>
-          {projects.slice(0, 5).map((p) => (
-            <li key={p.id}>
-              <a href={p.links[0].url} target="_blank" rel="noopener noreferrer">
-                {p.title}
+          {productionApps.map((a) => (
+            <li key={a.name}>
+              <a href={a.platforms[0].url} target="_blank" rel="noopener noreferrer">
+                {a.name}
               </a>
             </li>
           ))}

@@ -12,8 +12,8 @@ const Hero = () => {
             <a href="#contact" className="btn btn--primary btn--lg">
               Say hello <i className="bx bx-right-arrow-alt" />
             </a>
-            <a href="#work" className="btn btn--outline btn--lg">
-              View my work
+            <a href="#apps" className="btn btn--outline btn--lg">
+              View my apps
             </a>
           </div>
           <p className="hero__note">
@@ -33,7 +33,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="chip chip--1">
-            <i className="bx bxs-check-circle" /> Housypoint live on both stores
+            <i className="bx bxs-check-circle" /> 3 apps live in production
           </div>
           <div className="chip chip--2">
             <i className="bx bx-calendar-check" /> Available for projects

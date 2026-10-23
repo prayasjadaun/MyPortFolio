@@ -2,7 +2,7 @@
 // the section components only read from it.
 
 import Profile from './assets/Profile.jpeg'
-import AboutImg from './assets/about2.jpeg'
+import AboutImg from './assets/about-new.jpg'
 import CV from './assets/prayas.pdf'
 
 import CodeLoom from './assets/CodeLoom.png'
@@ -47,7 +47,7 @@ export const socials = [
 
 export const highlights = [
   { value: '2+', label: 'Years industry experience' },
-  { value: '7', label: 'Apps & projects shipped' },
+  { value: '3', label: 'Production apps live' },
   { value: '2', label: 'Platforms — Android & iOS' },
 ]
 
@@ -77,23 +77,6 @@ export const services = [
 ]
 
 export const projects = [
-  {
-    id: 7,
-    image: Housypoint,
-    title: 'Housypoint',
-    subtitle: 'Real estate mobile app · Flutter',
-    description:
-      'Listing, buying and renting properties made easy. Built and shipped in production on both stores.',
-    category: 'Industry',
-    links: [
-      {
-        label: 'Google Play',
-        url: 'https://play.google.com/store/apps/details?id=com.housypoint.housy_point&pcampaignid=web_share',
-      },
-      { label: 'App Store', url: 'https://apps.apple.com/in/app/housypoint/id6749288203' },
-    ],
-    featured: true,
-  },
   {
     id: 3,
     image: Jobmage,
@@ -150,7 +133,58 @@ export const projects = [
   },
 ]
 
-export const projectFilters = ['All', 'Industry', 'Advance', 'Intermediate', 'Basic']
+// Production apps — live on the stores, shown in their own section
+export const productionApps = [
+  {
+    name: 'Housypoint',
+    category: 'Real estate',
+    icon: Housypoint,
+    tone: 'teal',
+    description:
+      'A real estate marketplace for listing, buying and renting properties — built and shipped end to end in Flutter.',
+    features: ['Property listings', 'Buy & rent', 'Flutter'],
+    platforms: [
+      {
+        store: 'play',
+        label: 'Google Play',
+        url: 'https://play.google.com/store/apps/details?id=com.housypoint.housy_point&pcampaignid=web_share',
+      },
+      { store: 'apple', label: 'App Store', url: 'https://apps.apple.com/in/app/housypoint/id6749288203' },
+    ],
+  },
+  {
+    name: 'Inlobo',
+    category: 'Business · CRM',
+    initials: 'In',
+    tone: 'blue',
+    description:
+      'An AI-powered CRM that pulls leads from Meta Ads, Google Ads, LinkedIn and website forms into one dashboard, with WhatsApp automation and built-in calling.',
+    features: ['Lead capture', 'WhatsApp automation', 'Call logs', 'Analytics'],
+    platforms: [
+      {
+        store: 'play',
+        label: 'Google Play',
+        url: 'https://play.google.com/store/apps/details?id=com.inlobo.inloboAdmin&hl=en_IN',
+      },
+      { store: 'apple', label: 'App Store', url: 'https://apps.apple.com/us/app/inlobo/id6759565912' },
+    ],
+  },
+  {
+    name: 'Housy Inspect',
+    category: 'Business · Inspections',
+    initials: 'HI',
+    tone: 'peach',
+    description:
+      'A home inspection management platform for inspection service providers — businesses and independent inspectors join as verified service partners.',
+    features: ['Inspection workflow', 'Partner onboarding', 'Verification'],
+    platforms: [
+      { store: 'apple', label: 'App Store', url: 'https://apps.apple.com/in/app/housy-inspect/id6757533009' },
+    ],
+    note: 'Android build shared as an APK on request',
+  },
+]
+
+export const projectFilters = ['All', 'Advance', 'Intermediate', 'Basic']
 
 // Journey — shown like Calendly's Book → Prep → Capture → Follow-up tabs
 export const journey = [
@@ -258,7 +292,8 @@ export const testimonials = [
 ]
 
 export const navLinks = [
-  { label: 'Work', href: '#work' },
+  { label: 'Apps', href: '#apps' },
+  { label: 'Projects', href: '#work' },
   { label: 'Journey', href: '#journey' },
   { label: 'Skills', href: '#skills' },
   { label: 'About', href: '#about' },
