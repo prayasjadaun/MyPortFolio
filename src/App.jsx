@@ -1,30 +1,53 @@
-import React from 'react'
-import './App.css'
-import Home from './components/home/Home'
-import Header from './components/header/Header'
-import About from './components/about/About'
-import Skills from './components/skills/Skills'
-import Qualification from './components/Qualification/Qualification'
-import Testimonials from './components/testimonials/Testimonials'
-import Contact from './components/contact/Contact'
-import Footer from './components/footer/Footer'
-import ScrollUp from './components/scroll/ScrollUp'
-import Work from './components/work/Work'
+import { useEffect } from 'react'
+import './styles.css'
+import Header from './sections/Header'
+import Hero from './sections/Hero'
+import Services from './sections/Services'
+import Work from './sections/Work'
+import Journey from './sections/Journey'
+import Skills from './sections/Skills'
+import About from './sections/About'
+import Contact from './sections/Contact'
+import Footer from './sections/Footer'
+
+// Fades sections up as they scroll into view
+const useReveal = () => {
+  useEffect(() => {
+    const els = document.querySelectorAll('.reveal')
+    if (!('IntersectionObserver' in window)) {
+      els.forEach((el) => el.classList.add('is-visible'))
+      return
+    }
+    const io = new IntersectionObserver(
+      (entries) =>
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-visible')
+            io.unobserve(e.target)
+          }
+        }),
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    )
+    els.forEach((el) => io.observe(el))
+    return () => io.disconnect()
+  }, [])
+}
+
 function App() {
-  return ( 
+  useReveal()
+  return (
     <>
       <Header />
-      <div className="main">
-        <Home />
-        <About />
-        <Skills />
-        <Qualification />
+      <main>
+        <Hero />
+        <Services />
         <Work />
-        <Testimonials />
+        <Journey />
+        <Skills />
+        <About />
         <Contact />
-        <Footer />
-        <ScrollUp />
-      </div>
+      </main>
+      <Footer />
     </>
   )
 }
