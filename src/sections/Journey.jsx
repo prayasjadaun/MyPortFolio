@@ -1,6 +1,29 @@
 import { useState } from 'react'
 import { journey } from '../data'
 
+// Months from a 'YYYY-MM' start to the current month, counting both ends.
+const monthsSince = (start) => {
+  const [y, m] = start.split('-').map(Number)
+  const now = new Date()
+  return (now.getFullYear() - y) * 12 + (now.getMonth() + 1 - m) + 1
+}
+
+const formatDuration = (months) => {
+  const yrs = Math.floor(months / 12)
+  const mos = months % 12
+  const parts = []
+  if (yrs) parts.push(`${yrs} ${yrs === 1 ? 'yr' : 'yrs'}`)
+  if (mos) parts.push(`${mos} ${mos === 1 ? 'mo' : 'mos'}`)
+  return parts.join(' ')
+}
+
+const totalExperience = formatDuration(
+  journey
+    .find((j) => j.key === 'experience')
+    .items.filter((it) => it.start)
+    .reduce((sum, it) => sum + monthsSince(it.start), 0)
+)
+
 const Journey = () => {
   const [active, setActive] = useState(0)
   const current = journey[active]
@@ -29,7 +52,9 @@ const Journey = () => {
                 <span>
                   <strong>{j.label}</strong>
                   <small>
-                    {j.items.length} {j.items.length === 1 ? 'entry' : 'entries'}
+                    {j.key === 'experience'
+                      ? `${totalExperience} total`
+                      : `${j.items.length} ${j.items.length === 1 ? 'entry' : 'entries'}`}
                   </small>
                 </span>
               </button>
@@ -45,6 +70,11 @@ const Journey = () => {
                   <div className="timeline__card">
                     <span className="timeline__date">
                       <i className="bx bx-calendar" /> {it.date}
+                      {it.start && (
+                        <span className="timeline__duration">
+                          · {formatDuration(monthsSince(it.start))}
+                        </span>
+                      )}
                     </span>
                     <h3>{it.title}</h3>
                     <p>{it.place}</p>

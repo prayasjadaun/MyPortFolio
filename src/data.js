@@ -11,7 +11,9 @@ import Jobmage from './assets/Jobmage.png'
 import Tvmaze from './assets/Tvmaze.png'
 import FlickFever from './assets/Flickfever.png'
 import SoleSeeker from './assets/soleseeker.jpg'
-import Housypoint from './assets/housypoint.jpeg'
+import HousypointIcon from './assets/app-housypoint.png'
+import InloboIcon from './assets/app-inlobo.png'
+import HousyInspectIcon from './assets/app-housy-inspect.png'
 
 import Dhananjay from './assets/Dhananjay.png'
 import Khush from './assets/khush.jpg'
@@ -138,7 +140,7 @@ export const productionApps = [
   {
     name: 'Housypoint',
     category: 'Real estate',
-    icon: Housypoint,
+    icon: HousypointIcon,
     tone: 'teal',
     description:
       'A real estate marketplace for listing, buying and renting properties — built and shipped end to end in Flutter.',
@@ -155,7 +157,7 @@ export const productionApps = [
   {
     name: 'Inlobo',
     category: 'Business · CRM',
-    initials: 'In',
+    icon: InloboIcon,
     tone: 'blue',
     description:
       'An AI-powered CRM that pulls leads from Meta Ads, Google Ads, LinkedIn and website forms into one dashboard, with WhatsApp automation and built-in calling.',
@@ -172,7 +174,7 @@ export const productionApps = [
   {
     name: 'Housy Inspect',
     category: 'Business · Inspections',
-    initials: 'HI',
+    icon: HousyInspectIcon,
     tone: 'peach',
     description:
       'A home inspection management platform for inspection service providers — businesses and independent inspectors join as verified service partners.',
@@ -197,6 +199,7 @@ export const journey = [
         title: 'Full-stack Mobile App Developer',
         place: 'Pro Housy Point Tech Solution Pvt. Ltd',
         date: 'July 2025 – Present',
+        start: '2025-07',
       },
     ],
   },
