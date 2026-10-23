@@ -57,7 +57,7 @@ const Footer = () => (
             </a>
           </li>
           <li>
-            <a href={profile.resume} download>
+            <a href={profile.resume} download="Prayas_Jadaun_Resume.pdf">
               Resume
             </a>
           </li>

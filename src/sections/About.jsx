@@ -17,7 +17,7 @@ const About = () => {
             <span className="eyebrow">About me</span>
             <h2 className="section__title">Hi, I&apos;m {profile.name.split(' ')[0]}.</h2>
             <p className="section__text">{profile.about}</p>
-            <a href={profile.resume} download className="btn btn--primary">
+            <a href={profile.resume} download="Prayas_Jadaun_Resume.pdf" className="btn btn--primary">
               Download resume <i className="bx bx-download" />
             </a>
           </div>

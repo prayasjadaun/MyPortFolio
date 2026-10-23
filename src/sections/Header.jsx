@@ -39,7 +39,7 @@ const Header = () => {
               ))}
             </ul>
             <div className="nav__actions">
-              <a href={profile.resume} download className="btn btn--ghost">
+              <a href={profile.resume} download="Prayas_Jadaun_Resume.pdf" className="btn btn--ghost">
                 Resume
               </a>
               <a href="#contact" className="btn btn--primary" onClick={close}>

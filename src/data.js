@@ -3,7 +3,7 @@
 
 import Profile from './assets/Profile.jpeg'
 import AboutImg from './assets/about-new.jpg'
-import CV from './assets/prayas.pdf'
+import CV from './assets/Prayas_Jadaun_Resume.pdf'
 
 import CodeLoom from './assets/CodeLoom.png'
 import Adhicine from './assets/adhicine.png'
