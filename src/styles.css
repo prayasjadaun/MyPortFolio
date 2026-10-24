@@ -9,6 +9,12 @@
   --line: #e1e7f0;
   --bg: #ffffff;
   --tint: #f6f9fd;
+  --surface: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  --deep: #0b3558;
+  --strong: #0b3558;
+  --success: #15803d;
+  --success-soft: #e3f7e9;
 
   --peach: #ffc6bd;
   --sky: #9eccff;
@@ -25,6 +31,29 @@
 
   --font: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --max: 1180px;
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --navy: #e8eef6;
+  --navy-2: #a9b8cc;
+  --muted: #8597ad;
+  --blue: #4d94ff;
+  --blue-dark: #3a7ff0;
+  --blue-soft: rgba(77, 148, 255, 0.14);
+  --line: #233349;
+  --bg: #0b1220;
+  --tint: #101a2b;
+  --surface: #131e30;
+  --nav-bg: rgba(11, 18, 32, 0.85);
+  --deep: #0f1f38;
+  --strong: #2f6fd6;
+  --success: #4ade80;
+  --success-soft: rgba(74, 222, 128, 0.14);
+
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.35), 0 24px 60px rgba(0, 0, 0, 0.45);
+  color-scheme: dark;
 }
 
 *,
@@ -44,6 +73,7 @@ body {
   font-family: var(--font);
   color: var(--navy);
   background: var(--bg);
+  transition: background 0.3s, color 0.3s;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -131,7 +161,7 @@ button {
   border-radius: 999px;
   font-size: 12px;
   font-weight: 700;
-  background: #fff;
+  background: var(--surface);
   color: var(--navy-2);
   border: 1px solid var(--line);
 }
@@ -217,7 +247,7 @@ button {
 
 /* ============ Announcement + Nav ============ */
 .announce {
-  background: var(--navy);
+  background: var(--deep);
   color: #fff;
   font-size: 14px;
   text-align: center;
@@ -243,7 +273,7 @@ button {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--nav-bg);
   backdrop-filter: saturate(180%) blur(12px);
   -webkit-backdrop-filter: saturate(180%) blur(12px);
   border-bottom: 1px solid transparent;
@@ -300,10 +330,35 @@ button {
   align-items: center;
   gap: 8px;
 }
+.nav__menu {
+  margin-left: auto;
+}
+.nav__end {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 16px;
+}
 .nav__toggle {
   display: none;
   font-size: 28px;
   color: var(--navy);
+}
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  font-size: 20px;
+  color: var(--navy);
+  transition: border-color 0.2s, color 0.2s, transform 0.3s;
+}
+.theme-toggle:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+  transform: rotate(-15deg);
 }
 
 /* ============ Hero ============ */
@@ -354,7 +409,7 @@ button {
   position: relative;
   z-index: 1;
   width: min(320px, 80%);
-  background: #fff;
+  background: var(--surface);
   border-radius: var(--radius-lg);
   padding: 12px;
   box-shadow: var(--shadow-lg);
@@ -382,7 +437,7 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #fff;
+  background: var(--surface);
   border-radius: 999px;
   padding: 10px 16px;
   font-size: 14px;
@@ -562,7 +617,7 @@ button {
   content: '';
   position: absolute;
   inset: 150px 0 0 0;
-  background: #fff;
+  background: var(--surface);
   z-index: -1;
 }
 .app:hover {
@@ -581,7 +636,7 @@ button {
   border-radius: 22px;
   object-fit: cover;
   box-shadow: 0 8px 24px rgba(11, 53, 88, 0.18);
-  border: 3px solid #fff;
+  border: 3px solid var(--surface);
 }
 .app__icon--text {
   display: grid;
@@ -603,10 +658,10 @@ button {
   gap: 6px;
   padding: 4px 12px;
   border-radius: 999px;
-  background: #fff;
+  background: var(--surface);
   font-size: 13px;
   font-weight: 700;
-  color: #15803d;
+  color: var(--success);
   box-shadow: var(--shadow);
 }
 .app__live-dot {
@@ -660,7 +715,7 @@ button {
   gap: 8px;
   padding: 8px 14px 8px 12px;
   border-radius: 12px;
-  background: var(--navy);
+  background: var(--deep);
   color: #fff;
   font-weight: 700;
   font-size: 15px;
@@ -710,7 +765,7 @@ button {
   border-radius: 999px;
   font-weight: 700;
   font-size: 14px;
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--line);
   color: var(--navy-2);
   transition: all 0.2s;
@@ -720,8 +775,8 @@ button {
   color: var(--blue);
 }
 .filters__btn.is-active {
-  background: var(--navy);
-  border-color: var(--navy);
+  background: var(--strong);
+  border-color: var(--strong);
   color: #fff;
 }
 
@@ -732,7 +787,7 @@ button {
   gap: 24px;
 }
 .project {
-  background: #fff;
+  background: var(--surface);
   border-radius: var(--radius);
   border: 1px solid var(--line);
   overflow: hidden;
@@ -824,7 +879,7 @@ button {
   padding: 18px 20px;
   border-radius: var(--radius);
   border: 1px solid var(--line);
-  background: #fff;
+  background: var(--surface);
   text-align: left;
   transition: all 0.2s;
 }
@@ -901,11 +956,11 @@ button {
   height: 20px;
   margin-top: 22px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--surface);
   border: 5px solid var(--blue);
 }
 .timeline__card {
-  background: #fff;
+  background: var(--surface);
   border-radius: var(--radius);
   padding: 20px 24px;
   box-shadow: var(--shadow);
@@ -941,7 +996,7 @@ button {
   display: flex;
   align-items: center;
   gap: 12px;
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 14px 16px;
@@ -983,8 +1038,8 @@ button {
   padding: 2px 8px;
 }
 .skill__level.is-adv {
-  background: #e3f7e9;
-  color: #15803d;
+  background: var(--success-soft);
+  color: var(--success);
 }
 
 /* About + testimonials */
@@ -1055,7 +1110,7 @@ button {
   background: var(--tint);
 }
 .person.is-active {
-  background: #fff;
+  background: var(--surface);
   border-color: var(--line);
   box-shadow: var(--shadow);
 }
@@ -1091,7 +1146,7 @@ button {
 .cta {
   position: relative;
   overflow: hidden;
-  background: var(--navy);
+  background: var(--deep);
   color: #fff;
   padding: 104px 0 0;
 }
@@ -1157,7 +1212,7 @@ button {
 }
 
 .form {
-  background: #fff;
+  background: var(--surface);
   color: var(--navy);
   border-radius: var(--radius-lg);
   padding: 36px;
@@ -1190,7 +1245,7 @@ button {
 .form textarea:focus {
   outline: none;
   border-color: var(--blue);
-  background: #fff;
+  background: var(--surface);
 }
 .form__note {
   font-size: 14px;
@@ -1198,7 +1253,7 @@ button {
   text-align: center;
 }
 .form__note--ok {
-  color: #15803d;
+  color: var(--success);
 }
 .form__note--err {
   color: #dc2626;
@@ -1243,7 +1298,7 @@ button {
 /* Footer */
 .footer {
   padding: 72px 0 32px;
-  background: #fff;
+  background: var(--surface);
   border-top: 1px solid var(--line);
 }
 .footer__grid {
@@ -1289,9 +1344,9 @@ button {
   transition: all 0.2s;
 }
 .footer__social a:hover {
-  background: var(--navy);
+  background: var(--strong);
   color: #fff;
-  border-color: var(--navy);
+  border-color: var(--strong);
 }
 .footer__bottom {
   display: flex;
@@ -1310,6 +1365,42 @@ button {
   gap: 4px;
   font-weight: 700;
   color: var(--navy);
+}
+
+/* ============ Dark theme: tinted gradients ============ */
+:root[data-theme='dark'] .blob {
+  opacity: 0.22;
+}
+:root[data-theme='dark'] .service--blue {
+  background: linear-gradient(160deg, var(--surface) 30%, #132c55 100%);
+}
+:root[data-theme='dark'] .service--peach {
+  background: linear-gradient(160deg, var(--surface) 30%, #3a2228 100%);
+}
+:root[data-theme='dark'] .service--lilac {
+  background: linear-gradient(160deg, var(--surface) 30%, #28204a 100%);
+}
+:root[data-theme='dark'] .app--teal::before {
+  background: linear-gradient(135deg, #0f3a3a, #132c55 70%, var(--surface));
+}
+:root[data-theme='dark'] .app--blue::before {
+  background: linear-gradient(135deg, #132c55, #28204a 70%, var(--surface));
+}
+:root[data-theme='dark'] .app--peach::before {
+  background: linear-gradient(135deg, #3a2228, #3a3018 70%, var(--surface));
+}
+:root[data-theme='dark'] .journey__panel {
+  background: linear-gradient(150deg, #0f1d36, #1c1734);
+}
+:root[data-theme='dark'] .quote {
+  background: linear-gradient(140deg, #2b2716 0%, #33212a 55%, #251f45 100%);
+}
+:root[data-theme='dark'] .store-btn {
+  background: #000;
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+:root[data-theme='dark'] .chip--1 i {
+  color: var(--success);
 }
 
 /* ============ Reveal on scroll ============ */
@@ -1372,7 +1463,8 @@ button {
     align-items: stretch;
     gap: 16px;
     padding: 20px 24px 28px;
-    background: #fff;
+    margin-left: 0;
+    background: var(--surface);
     border-bottom: 1px solid var(--line);
     box-shadow: 0 16px 32px rgba(11, 53, 88, 0.1);
     opacity: 0;

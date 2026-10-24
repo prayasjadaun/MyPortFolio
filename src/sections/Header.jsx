@@ -4,6 +4,16 @@ import { profile, navLinks } from '../data'
 const Header = () => {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [theme, setTheme] = useState(() => document.documentElement.dataset.theme || 'light')
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme
+    try {
+      localStorage.setItem('theme', theme)
+    } catch {
+      // Storage can be blocked; the theme still applies for this visit.
+    }
+  }, [theme])
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
@@ -48,14 +58,24 @@ const Header = () => {
             </div>
           </nav>
 
-          <button
-            className="nav__toggle"
-            aria-label={open ? 'Close menu' : 'Open menu'}
-            aria-expanded={open}
-            onClick={() => setOpen(!open)}
-          >
-            <i className={open ? 'bx bx-x' : 'bx bx-menu'} />
-          </button>
+          <div className="nav__end">
+            <button
+              className="theme-toggle"
+              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            >
+              <i className={theme === 'dark' ? 'bx bx-sun' : 'bx bx-moon'} />
+            </button>
+            <button
+              className="nav__toggle"
+              aria-label={open ? 'Close menu' : 'Open menu'}
+              aria-expanded={open}
+              onClick={() => setOpen(!open)}
+            >
+              <i className={open ? 'bx bx-x' : 'bx bx-menu'} />
+            </button>
+          </div>
         </div>
       </header>
     </>

@@ -10,6 +10,14 @@
     />
     <meta name="theme-color" content="#0b3558" />
     <title>Prayas Jadaun — Mobile App Developer</title>
+    <script>
+      // Apply the saved (or system) theme before first paint to avoid a light flash.
+      try {
+        var t = localStorage.getItem('theme')
+        if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        document.documentElement.dataset.theme = t
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>
