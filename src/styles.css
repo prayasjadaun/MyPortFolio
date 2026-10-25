@@ -687,6 +687,25 @@ button {
   font-size: 15px;
   margin-bottom: 18px;
 }
+.app__highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.app__highlights li {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--navy-2);
+}
+.app__highlights i {
+  flex-shrink: 0;
+  font-size: 18px;
+  color: var(--blue);
+}
 .app__features {
   list-style: none;
   display: flex;
@@ -980,6 +999,19 @@ button {
   font-weight: 700;
   color: var(--blue);
   margin-bottom: 4px;
+}
+.timeline__points {
+  margin-top: 14px;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--navy-2);
+}
+.timeline__points li::marker {
+  color: var(--blue);
 }
 .timeline__duration {
   color: var(--muted);

@@ -78,6 +78,13 @@ const Journey = () => {
                     </span>
                     <h3>{it.title}</h3>
                     <p>{it.place}</p>
+                    {it.points && (
+                      <ul className="timeline__points">
+                        {it.points.map((pt) => (
+                          <li key={pt}>{pt}</li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </li>
               ))}

@@ -31,6 +31,16 @@ const ProductionApps = () => (
             <span className="app__category">{app.category}</span>
             <p className="app__text">{app.description}</p>
 
+            {app.highlights && (
+              <ul className="app__highlights">
+                {app.highlights.map((h) => (
+                  <li key={h}>
+                    <i className="bx bx-check" /> {h}
+                  </li>
+                ))}
+              </ul>
+            )}
+
             <ul className="app__features">
               {app.features.map((f) => (
                 <li key={f}>{f}</li>

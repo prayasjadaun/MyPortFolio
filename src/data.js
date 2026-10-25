@@ -23,7 +23,7 @@ import Manish from './assets/manish.jpeg'
 
 export const profile = {
   name: 'Prayas Jadaun',
-  role: 'Full-stack Mobile App Developer',
+  role: 'Full-Stack Mobile App Developer',
   photo: Profile,
   aboutPhoto: AboutImg,
   resume: CV,
@@ -84,7 +84,7 @@ export const projects = [
     image: Jobmage,
     title: 'JobMage',
     subtitle: 'MERN stack web app',
-    description: 'A full-stack web app built with MongoDB, Express, React and Node.',
+    description: 'A full-Stack web app built with MongoDB, Express, React and Node.',
     category: 'Advance',
     links: [{ label: 'Live demo', url: 'https://jobmage.vercel.app/' }],
   },
@@ -143,8 +143,14 @@ export const productionApps = [
     icon: HousypointIcon,
     tone: 'teal',
     description:
-      'A real estate marketplace for listing, buying and renting properties — built and shipped end to end in Flutter.',
-    features: ['Property listings', 'Buy & rent', 'Flutter'],
+      'A production real estate app for property discovery, buying, renting and user engagement — built and shipped end to end in Flutter.',
+    highlights: [
+      'Property listings, search, filters, shortlist and detailed property pages',
+      'REST API integration for authentication, live property data and user interactions',
+      'Faster screens through efficient state management and optimized UI rendering',
+      'Deployed and maintained on both Android and iOS',
+    ],
+    features: ['Flutter', 'REST APIs', 'State management', 'Android & iOS'],
     platforms: [
       {
         store: 'play',
@@ -156,12 +162,18 @@ export const productionApps = [
   },
   {
     name: 'Inlobo',
-    category: 'Business · CRM',
+    category: 'B2B · WhatsApp CRM',
     icon: InloboIcon,
     tone: 'blue',
     description:
-      'An AI-powered CRM that pulls leads from Meta Ads, Google Ads, LinkedIn and website forms into one dashboard, with WhatsApp automation and built-in calling.',
-    features: ['Lead capture', 'WhatsApp automation', 'Call logs', 'Analytics'],
+      'A production SaaS platform for WhatsApp-based customer communication, lead management, automation and sales workflows — built with Flutter and Django.',
+    highlights: [
+      'Real-time WhatsApp chat over WebSockets',
+      'Campaigns, broadcasts, templates, auto-replies and canned responses',
+      'Leads from Meta, Google Ads, 99acres, Justdial and custom sites via APIs and webhooks',
+      'Lead assignment, team access control, calling, notifications and analytics',
+    ],
+    features: ['Flutter', 'Django REST', 'PostgreSQL', 'WebSockets', 'Firebase FCM'],
     platforms: [
       {
         store: 'play',
@@ -196,10 +208,19 @@ export const journey = [
     icon: 'bx bx-briefcase-alt-2',
     items: [
       {
-        title: 'Full-stack Mobile App Developer',
+        title: 'Technical Lead – Mobile Applications',
         place: 'Pro Housy Point Tech Solution Pvt. Ltd',
         date: 'July 2025 – Present',
         start: '2025-07',
+        points: [
+          'Lead mobile development end to end — architecture, features, API integration, debugging, performance and production releases.',
+          'Build and maintain production apps Inlobo, Housypoint and Workfina on Android and iOS.',
+          'Ship CRM and business communication features: WhatsApp automation, lead management, calling, real-time chat, notifications and analytics.',
+          'Integrate REST APIs, WebSockets, webhooks, Firebase FCM and third-party services into production workflows.',
+          'Collaborate on AI-driven solutions, including an AI Calling Agent and workflow automation.',
+          'Own technical support escalations, production debugging and customer-impacting issues.',
+          'Run the full Play Store and App Store release lifecycle — versioning, releases and production updates.',
+        ],
       },
     ],
   },
